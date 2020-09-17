@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) int value;
 
 -(void)increase;
+
+-(void)increase2;
 @end
 
 NS_ASSUME_NONNULL_END

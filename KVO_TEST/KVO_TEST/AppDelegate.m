@@ -39,6 +39,9 @@
     
     // 通过成员变量直接赋值value能否生效?
     [obj increase]; // 没有生效.
+    
+    // 手动添加上will/didChangeValueForKey: 后生效.
+    [obj increase2];
     return YES;
 }
 

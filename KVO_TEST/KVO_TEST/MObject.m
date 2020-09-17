@@ -21,4 +21,12 @@
     // 直接为成员变量赋值
     _value += 1;
 }
+
+-(void)increase2
+{
+    // 直接为成员变量赋值
+    [self willChangeValueForKey:@"value"];
+    _value += 1;
+    [self didChangeValueForKey:@"value"];
+}
 @end
