@@ -19,7 +19,7 @@
 {
     /*
      1.自定义子类
-     2.重写setHKProperty,在方法中,调用super的,通知观察者!
+     2.重写setMYProperty,在方法中,调用super的,通知观察者!
      3.修改当前对象的isa指针!!指向自定义的子类!!
      */
     //1.动态的生成一个类!!
@@ -34,7 +34,7 @@
     //2.添加set方法
     NSString *setMathod = [NSString stringWithFormat:@"set%@:",[keyPath capitalizedString]];
     SEL setSelector = NSSelectorFromString(setMathod);
-    class_addMethod(MyClass, setSelector, (IMP)setHKProperty, "v@:@");
+    class_addMethod(MyClass, setSelector, (IMP)setMYProperty, "v@:@");
     //3.修改isa指针
     object_setClass(self, MyClass);
     //4.保存观察者对象
@@ -46,7 +46,7 @@
 //1.调用super的set方法
 //2.通知外界!
 
-void setHKProperty(id self,SEL _cmd, NSString *property){
+void setMYProperty(id self,SEL _cmd, NSString *property){
     //保存子类类型
     id class = [self class];
     //改变self的isa指针
