@@ -8,6 +8,8 @@
 #import "AppDelegate.h"
 #import "MObject.h"
 #import "MObserver.h"
+#import "XZObject.h"
+#import "NSObject+MYKVO.h"
 
 @interface AppDelegate ()
 
@@ -42,6 +44,12 @@
     
     // 手动添加上will/didChangeValueForKey: 后生效.
     [obj increase2];
+    
+    
+    // 自定义KVO
+    XZObject *xzobj = [XZObject new];
+    [xzobj my_addObserver:observer forKeyPath:@"name" options:NSKeyValueObservingOptionNew context:nil];
+    xzobj.name = @"张三";
     return YES;
 }
 

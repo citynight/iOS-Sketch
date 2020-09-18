@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		025320942513C44F00C7A25F /* XZObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 025320932513C44F00C7A25F /* XZObject.m */; };
 		02CC4EAE251385AD00E4C17E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CC4EAD251385AD00E4C17E /* AppDelegate.m */; };
 		02CC4EB1251385AD00E4C17E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CC4EB0251385AD00E4C17E /* SceneDelegate.m */; };
 		02CC4EB4251385AD00E4C17E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CC4EB3251385AD00E4C17E /* ViewController.m */; };
@@ -18,6 +19,7 @@
 		02CC4ED4251385AD00E4C17E /* KVO_TESTUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CC4ED3251385AD00E4C17E /* KVO_TESTUITests.m */; };
 		02CC4EE6251385E400E4C17E /* MObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CC4EE5251385E400E4C17E /* MObject.m */; };
 		02CC4EEC251385F600E4C17E /* MObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CC4EEB251385F600E4C17E /* MObserver.m */; };
+		02EDEDFA2513BB6700FA2CF1 /* NSObject+MYKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 02EDEDF92513BB6700FA2CF1 /* NSObject+MYKVO.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		025320922513C44F00C7A25F /* XZObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZObject.h; sourceTree = "<group>"; };
+		025320932513C44F00C7A25F /* XZObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZObject.m; sourceTree = "<group>"; };
 		02CC4EA9251385AD00E4C17E /* KVO_TEST.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KVO_TEST.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02CC4EAC251385AD00E4C17E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		02CC4EAD251385AD00E4C17E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 		02CC4EE5251385E400E4C17E /* MObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MObject.m; sourceTree = "<group>"; };
 		02CC4EEA251385F600E4C17E /* MObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MObserver.h; sourceTree = "<group>"; };
 		02CC4EEB251385F600E4C17E /* MObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MObserver.m; sourceTree = "<group>"; };
+		02EDEDF82513BB6700FA2CF1 /* NSObject+MYKVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+MYKVO.h"; sourceTree = "<group>"; };
+		02EDEDF92513BB6700FA2CF1 /* NSObject+MYKVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MYKVO.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,10 @@
 				02CC4EE5251385E400E4C17E /* MObject.m */,
 				02CC4EEA251385F600E4C17E /* MObserver.h */,
 				02CC4EEB251385F600E4C17E /* MObserver.m */,
+				02EDEDF82513BB6700FA2CF1 /* NSObject+MYKVO.h */,
+				02EDEDF92513BB6700FA2CF1 /* NSObject+MYKVO.m */,
+				025320922513C44F00C7A25F /* XZObject.h */,
+				025320932513C44F00C7A25F /* XZObject.m */,
 				02CC4EAF251385AD00E4C17E /* SceneDelegate.h */,
 				02CC4EB0251385AD00E4C17E /* SceneDelegate.m */,
 				02CC4EB2251385AD00E4C17E /* ViewController.h */,
@@ -281,6 +291,8 @@
 				02CC4EBF251385AD00E4C17E /* main.m in Sources */,
 				02CC4EEC251385F600E4C17E /* MObserver.m in Sources */,
 				02CC4EE6251385E400E4C17E /* MObject.m in Sources */,
+				02EDEDFA2513BB6700FA2CF1 /* NSObject+MYKVO.m in Sources */,
+				025320942513C44F00C7A25F /* XZObject.m in Sources */,
 				02CC4EB1251385AD00E4C17E /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,7 +466,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = KVO_TEST/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -471,7 +485,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = KVO_TEST/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

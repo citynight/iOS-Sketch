@@ -7,6 +7,7 @@
 
 #import "MObserver.h"
 #import "MObject.h"
+#import "XZObject.h"
 
 @implementation MObserver
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -15,7 +16,12 @@
         // 获取value的新值
         NSNumber *valueNum = [change valueForKey:NSKeyValueChangeNewKey];
         NSLog(@"value is %@",valueNum);
-    } else {
+    }
+    else if([object isKindOfClass:[XZObject class]] && [keyPath isEqualToString:@"name"]) {
+        NSString *valueName = [change valueForKey:NSKeyValueChangeNewKey];
+        NSLog(@"name is %@",valueName);
+    }
+    else {
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
 }
